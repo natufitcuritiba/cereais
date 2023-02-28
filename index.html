@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/path847.ico"type="image/x-icon">
-    <title>Natufit Curitiba</title>
+    <title>Natufit Curitiba Cerealista Produtos Naturais </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <meta name="description" content="Natufit Curitiba Alimentos - Cerealista. Produtos 100% naturais. Grãos, Castanhas e muito mais...">
+    <link rel="canonical" href="https://natufitcuritiba.github.io/cereais/" >
   </head>
   <body>
     <header>
@@ -24,7 +27,7 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">A melhor opção para seus ingredientes especiais!</h1>
+        <h1 class="fw-light">A melhor opção para seus ingredientes especiais, produtos naturais e cereais!</h1>
         <img src="images/phone-wallpaper-gf2a27546c_640.jpg" class="object-fit-cover border rounded" alt="Imagem de especiarias dispostas em colheres. Daria-Yakovleva por Pixabay">
         <p class="lead text-muted">Possuímos ampla variedade de produtos naturais, grãos, castanhas, farinhas, temperos e especiarias a granel.</p>
         <p class="lead text-muted">Envie uma mensagem para conhecer nossos produtos.</p>
@@ -35,6 +38,36 @@
         </p>
       </div>
     </div>
+  </section>
+  <section id="politicaprivacidade">
+    <div class="aviso-cookies" id="aviso-cookies">
+      <div class="card text-center" >
+        <div class="card-body">
+          <h5 class="card-title">Aviso de cookies</h5>
+          <p class="card-text">Utilizamos cookies essenciais e tecnologias de acordo com nossa política de privacidade e, ao continuar navegando você concorda com estas condições.</p>
+          <button class="btn btn-success" id="btn-aceptar-cookies">Aceitar</button>
+          <br>
+          <br>
+          <p><a href="politicaprivacidade.html" target="_blank">Politica Privacidade</a></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const botonAceptarCookies = document.getElementById('btn-aceptar-cookies');
+      const avisoCookies = document.getElementById('aviso-cookies');
+      dataLayer = [];
+      if(!localStorage.getItem('cookies-aceptadas')){
+        avisoCookies.classList.add('activo');
+      } else {
+        dataLayer.push({'event': 'cookies-aceptadas'});
+      }
+        botonAceptarCookies.addEventListener('click', () => {
+        avisoCookies.classList.remove('activo');
+        fondoAvisoCookies.classList.remove('activo');
+        localStorage.setItem('cookies-aceptadas', true);
+        dataLayer.push({'event': 'cookies-aceptadas'});
+        });
+    </script>
   </section>
 </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
